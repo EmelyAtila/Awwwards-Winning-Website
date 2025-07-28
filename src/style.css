@@ -1,0 +1,593 @@
+body {
+  margin: 0; /* remover margem padrão do navegador */
+  padding: 0; /* remover padding padrão */
+  background-color: #000000; /* definir fundo preto */
+  scroll-behavior: smooth; /* comportamento de rolagem suave */
+}
+
+.container {
+  font-family: Arial, Helvetica, sans-serif; /* fonte padrão */
+  color: white; /* cor do texto */
+  display: flex; /* layout flexível */
+  flex-direction: column; /* elementos em coluna */
+  align-items: center; /* centraliza horizontalmente */
+  position: relative; /* necessário para filhos absolutos */
+}
+
+header {
+  position: absolute; /* posicionamento fixo na tela */
+  top: 0; right: 0; left: 0; /* ocupa toda a largura no topo */
+  display: flex; /* layout flexível */
+  align-items: center; /* alinha verticalmente */
+  justify-content: space-between; /* espaçamento entre itens */
+  padding: 10px 40px; /* espaçamento interno */
+  z-index: 999; /* sobrepõe outros elementos */
+  background-color: #4b4b4b5b; /* fundo semitransparente */
+  backdrop-filter: blur(10px); /* efeito de desfoque */
+}
+
+.head-left {
+  display: flex; /* layout horizontal */
+  align-items: center; /* centraliza verticalmente */
+}
+
+.head-left img {
+  width: 40px; height: 40px; /* tamanho da logo */
+  margin-right: 20px; /* espaçamento entre logo e botão */
+}
+
+.head-left button {
+  border: none; /* sem borda */
+  padding: 10px 30px; /* tamanho do botão */
+  border-radius: 20px; /* bordas arredondadas */
+  font-weight: 700; /* texto em negrito */
+  cursor: pointer; /* cursor clicável */
+}
+
+.head-left button:hover {
+  opacity: 0.7; /* efeito ao passar o mouse */
+}
+
+.head-right {
+  display: flex; /* layout horizontal */
+}
+
+.head-right a {
+  text-decoration: none; /* remove sublinhado */
+  padding-left: 25px; /* espaço entre os links */
+  color: white; /* cor do texto */
+  font-size: 15px; /* tamanho da fonte */
+}
+
+.hero-section {
+  position: relative; /* referência para filhos absolutos */
+  width: 100%; height: 100vh; /* ocupa toda a tela */
+  overflow: hidden; /* esconde excessos */
+}
+
+.hero-vid {
+  width: 100%; height: 100%; /* ocupa todo o espaço */
+  position: relative; /* referência para conteúdo */
+  color: white;
+}
+
+.hero-video {
+  width: 100%; height: 100%; /* vídeo ocupa tudo */
+  object-fit: cover; /* cobre sem distorcer */
+}
+
+.hero-info {
+  z-index: 1; /* acima do vídeo */
+  position: absolute; /* posição fixa */
+  top: 80px; left: 50px; /* deslocamento do topo e da esquerda */
+}
+
+.hero-info h1 {
+  font-size: 120px; /* título grande */
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-weight: 900; /* peso máximo */
+  font-style: normal;
+  margin-top: 30px; margin-bottom: 20px; /* espaçamentos verticais */
+}
+
+.hero-info p {
+  color:white; /* cor do texto */
+  max-width: 210px; /* limite de largura */
+  /* letter-spacing: 0.5px; adiciona 0,5 pixels de espaço entre as letras */
+}
+
+.hero-info button {
+  background-color: #edff66; /* cor viva */
+  border: 2px solid #edff66; /* borda igual ao fundo */
+  padding: 10px 40px; /* tamanho do botão */
+  border-radius: 20px; /* bordas arredondadas */
+  cursor: pointer; /* cursor clicável */
+  color: black; /* texto em preto */
+  transition: 0.3s; /* transição suave */
+}
+
+.hero-info button:hover {
+  background-color: transparent; /* botão transparente no hover */
+  color: white; /* texto branco no hover */
+  box-shadow: 0 0 15px #edff66; /* efeito de brilho */
+}
+
+.gaming-text {
+  font-size: 120px; /* tamanho grande */
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  margin: 0; /* sem margens */
+  position: absolute; /* posicionamento fixo */
+  right: 20px; bottom: 30px; /* canto inferior direito */
+}
+
+/* Estiliza um botão redondo centralizado na tela, com aparência chamativa e comportamento animado */
+.next-btn {
+  width: 200px; /* Largura do botão */
+  height: 200px; /* Altura igual à largura — forma circular */
+  background-color: #edff66b6; /* Amarelo semitransparente — chama atenção */
+  position: absolute; /* Posicionamento exato no contêiner */
+  left: 45%; /* Aproxima do centro horizontal */
+  bottom: 45%; /* Aproxima do centro vertical */
+  border-radius: 50%; /* Formato circular */
+  display: flex; /* Layout flexível interno */
+  align-items: center; /* Centraliza verticalmente */
+  justify-content: center;/* Centraliza horizontalmente */
+  color: black; /* Cor do texto — contraste claro */
+  font-size: 30px; /* Texto grande e legível */
+  font-weight: bold; /* Texto em destaque */
+  cursor: pointer; /* Ícone de mão — interatividade */
+  z-index: 100; /* Sobreposição acima de outros elementos */
+  opacity: 0; /* Invisível inicialmente */
+  transition: 0.5s; /* Transição suave */
+}
+
+.next-btn:hover{
+  width: 200px; /* mantém tamanho circular */
+  height: 200px; /* mantém tamanho circular */
+  opacity: 1; /* torna visível no hover */
+  box-shadow: 0 0 15px rgba(255,255,255,0.616); /* brilho suave ao redor */
+}
+
+/* Section 2 */
+
+.about-section {
+  width: 100%; /* ocupa toda a largura */
+  height: 100%; /* ocupa toda a altura do pai */
+  margin-top: 200px; /* espaçamento superior */
+  display: flex; /* ativa layout flexível */
+  flex-direction: column; /* itens em coluna */
+  align-items: center; /* centraliza na horizontal */
+  color: white; /* texto branco */
+}
+
+.image-box {
+  width: 360px; /* largura da imagem */
+  height: 510px; /* altura da imagem */
+  overflow: hidden; /* corta excesso */
+  display: flex; /* ativa flex */
+  align-items: center; /* centraliza verticalmente */
+  justify-content: center; /* centraliza horizontalmente */
+  border-radius: 50px; /* cantos arredondados */
+}
+
+/* EFEITO DE DESFOQUE COM POSICIONAMENTO ABSOLUTO */
+.stones-img {
+  position: absolute;     /* Remove o elemento do fluxo normal e permite posicioná-lo livremente sobre o layout */
+  margin-top: 22%;        /* Afasta o topo do elemento em relação ao topo do container, criando espaçamento proporcional */
+  width: 500px;           /* Define largura generosa, indicando que a imagem tem destaque visual na composição */
+}
+
+.image-box img{
+  width: 100%;  /* ocupa toda a largura */
+  height: 100%; /* ocupa toda a altura */
+  object-fit: cover; /* preenche a área cortando excessos */
+}
+
+.about-section p {
+  font-size: 12px; /* texto pequeno para parágrafo */
+   color: gray; /* cor cinza para contraste */
+}
+
+/* Texto com cor animada  */
+.about-section h1 {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; /* fonte pesada */
+  font-weight: 900; /* bem negrito */
+  font-size: 100px; /* tamanho grande */
+  max-width: 1150px; /* largura máxima */
+  text-align: center; /* centraliza texto */
+  margin: 25px 0; /* espaçamento vertical */
+  text-transform: uppercase; /* tudo em maiúsculas */
+  background: linear-gradient(to right, #4acfee, #53f8c9, #02d79a, #6070fd, #2a46ff, #0099ff, #4acfee); /* gradiente animado */
+  background-size: 200%; /* dobra o tamanho do fundo */
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; /* só mostra o gradiente */
+  animation: animate-gradient 2.5s linear infinite; /* anima fundo */
+}
+
+@keyframes animate-gradient {
+  to {
+    background-position: 200%; /* move o gradiente */
+  }
+}
+
+.about-section h4 {
+  margin-top: 50px; /* espaçamento acima */
+  margin-bottom: 0; /* remove espaço abaixo */
+}
+
+.about-section h5 {
+  margin-top: 5px; /* pequeno espaço acima */
+  color: gray; /* cor cinza para contraste */
+  max-width: 425px; /* limita a largura */
+  text-align: center; /* centraliza o texto */
+  line-height: 25px; /* altura da linha para melhor leitura */
+}
+
+.info-section {
+  display: flex; /* Layout flex */
+  flex-direction: column; /* Em coluna */
+  position: relative; /* Base para posicionamento */
+  width: 80%; /* Largura de 80% */
+  margin-top: 100px; /* Espaço acima */
+}
+
+.info-section h3 {
+  margin-bottom: 0; /* Sem espaço abaixo do h3 */
+}
+
+.info-section p {
+  margin-top: 5px; /* Espaço acima do parágrafo */
+  color: gray; /* Texto cinza */
+  max-width: 400px; /* Largura máxima */
+  line-height: 25px; /* Altura das linhas */
+}
+
+.info-cards {
+  display: grid; /* Layout em grade */
+  grid-template-columns: auto auto; /* Duas colunas automáticas */
+  gap: 20px; /* Espaço entre itens */
+  width: 100%; /* Largura total */
+  height: 100%; /* Altura total */
+  margin-top: 30px; /* Espaço acima */
+}
+
+.card {
+  position: relative; /* Base para elementos posicionados dentro */
+  width: auto; /* Largura automática */
+  height: 40vh; /* Altura relativa à tela */
+  overflow: hidden; /* Esconde o que passa da borda */
+  border: 1px solid gray; /* Borda cinza */
+  border-radius: 20px; /* Cantos arredondados */
+  transition: 0.5s; /* Transição suave */
+}
+
+.card h1 {
+  position: absolute; /* Posição fixa dentro do card */
+  margin: 0; /* Sem margem */
+  top: 10px; /* Distância do topo */
+  left: 5%; /* Alinhamento à esquerda */
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; /* Fonte forte */
+  font-size: 60px; /* Tamanho grande */
+  z-index: 1;  /* Fica acima de outros elementos */
+
+  /* Cópia texto gradiente seção about */
+  background: linear-gradient(to right, #4acfee, #53f8c9, #02d79a, #6070fd, #2a46ff, #0099ff, #4acfee); /* gradiente animado */
+  background-size: 200%; /* dobra o tamanho do fundo */
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; /* só mostra o gradiente */
+  animation: animate-gradient 2.5s linear infinite; /* anima fundo */
+
+  max-width: 250px;
+
+}
+
+.card p {
+  position: absolute; /* Posicionado dentro do card */
+  top: 80px; /* Distância do topo */
+  left: 5%; /* Alinhamento à esquerda */
+  z-index: 1; /* Sobre o vídeo */
+  max-width: 250px; /* Largura máxima */
+  color: lightgray; /* Cor clara */
+}
+
+.card video {
+  width: 100%; /* Preenche a largura */
+  height: 100%; /* Preenche a altura */
+  object-fit: cover; /* Cobre o card sem distorcer */
+}
+
+.card button {
+  position: absolute; /* Posição relativa dentro do card */
+  bottom: 5%; /* Distância da parte inferior */
+  left: 5%; /* Alinhamento à esquerda */
+  padding: 10px 25px; /* Espaçamento interno */
+  border: 1px solid gray; /* Borda cinza */
+  background-color: #0f1217; /* Fundo escuro */
+  color: gray; /* Texto cinza */
+  border-radius: 20px; /* Cantos arredondados */
+  cursor: pointer;     /* Cursor de clique */
+  transition: 0.3s;     /* Transição suave */
+
+}
+
+.card button:hover {
+  box-shadow: 0 0 15px lightgray; /* brilho suave ao redor */
+  opacity: 0.7; /* reduz a opacidade */
+}
+
+.card:hover {
+  box-shadow: 0 0 15px rgb(211, 211, 211); /* sombra suave ao passar o mouse */
+}
+
+/* Estilo específico para o 1º card */
+.card:nth-child(1) {
+  grid-column: span 2; /* ocupa 2 colunas */
+}
+
+/* Estilo específico para o 2º card */
+.card:nth-child(2) {
+  grid-row: span 2; /* ocupa 2 linhas */
+  height: 83vh;     /* altura proporcional à tela */
+}
+
+.contact-section {
+  position: relative; /* base para posicionar elementos com absolute */
+  width: 100%; /* ocupa toda a largura */
+  margin-top: 100px; /* espaço superior */
+  display: flex; /* ativa layout flexível */
+  flex-direction: column; /* filhos em coluna */
+  align-items: center; /* centraliza os filhos na horizontal */
+  height: 100%; /* altura igual à tela */
+  margin-bottom: 100px;
+}
+
+.contact-section .img1 {
+  position: absolute; /* posição livre dentro da seção */
+  top: 10%; /* distância do topo */
+  right: 20px; /* distância da borda direita */
+  height: 400px; /* altura da imagem */
+  /* Clip do https://bennettfeely.com/clippy/ */
+  clip-path: polygon(25% 0%, 100% 0%, 79% 100%, 0 100%);
+}
+
+.contact-section .img2 {
+  position: absolute; /* posição livre dentro da seção */
+  left: 50px; /* distância da borda esquerda */
+  top: 10px; /* distância do topo */
+  height: 200px; /* altura da imagem */
+  /* Clip do https://bennettfeely.com/clippy/ */
+  clip-path: polygon(25% 0%, 78% 6%, 100% 50%, 66% 84%, 25% 100%, 0% 50%);
+}
+
+.contact-section .img3 {
+  position: absolute; /* posição livre dentro da seção */
+  left: 5%; /* distância da esquerda (relativa) */
+  bottom: 5%; /* distância da parte inferior */
+  height: 250px; /* altura da imagem */
+  width: 250px; /* largura da imagem */
+  /* Clip do https://bennettfeely.com/clippy/ */
+  clip-path: polygon(52% 0, 100% 31%, 70% 100%, 33% 100%, 0 30%);
+}
+
+.contact-section p{
+  margin-top: 100px;
+  color: gray;
+}
+
+.contact-section h1{
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 70px;
+  max-width: 550px;
+  text-align: center;
+  
+  /* Cópia texto gradiente seção about */
+  background: linear-gradient(to right, #4acfee, #53f8c9, #02d79a, #6070fd, #2a46ff, #0099ff, #4acfee); /* gradiente animado */
+  background-size: 200%; /* dobra o tamanho do fundo */
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; /* só mostra o gradiente */
+  animation: animate-gradient 2.5s linear infinite; /* anima fundo */
+}
+
+.contact-section button{
+  padding: 10px 25px; /* Espaçamento interno */
+  border: 1px solid gray; /* Borda cinza */
+  background-color: #0f1217; /* Fundo escuro */
+  color: gray; /* Texto cinza */
+  border-radius: 20px; /* Cantos arredondados */
+  cursor: pointer;     /* Cursor de clique */
+  transition: 0.3s;     /* Transição suave */
+}
+
+.contact-section button:hover {
+  box-shadow: 0 0 15px lightgray; /* brilho suave ao redor */
+  opacity: 0.7; /* reduz a opacidade */
+}
+
+.footer {
+  width: 100%; /* ocupa toda a largura da tela */
+  display: flex; /* ativa layout flexível */
+  align-items: center; /* alinha os itens verticalmente ao centro */
+  justify-content: space-between; /* distribui os itens com espaço entre eles */
+  background-color: rgba(211, 211, 211, 0.21); /* cor de fundo cinza claro com transparência */
+  backdrop-filter: blur(10px); /* aplica um desfoque ao fundo (efeito de vidro fosco) */
+  height: 100px;
+}
+
+.footer p{
+  margin: 0 20px; /* margem horizontal de 20px (corrigido: sem espaço entre 20 e px) */
+}
+
+.footer ul{
+  display: flex; /* organiza os itens da lista em linha */
+  list-style: none; /* remove os marcadores padrão da lista */
+  margin-right: 140px;
+}
+
+.footer a{
+  text-decoration: none; /* remove sublinhado dos links */
+  color: white; /* cor do texto dos links */
+  padding: 7px 7px; /* espaçamento interno (vertical e horizontal) */
+  border-radius: 50px; /* cantos arredondados (efeito de botão circular) */
+  border: 1px solid rgba(0, 130, 211); /* borda azul com transparência */
+  transition: 0.3s; /* suaviza efeitos como hover */
+  margin: 0 10px; /* espaçamento horizontal entre os links */
+}
+
+/* Blur efect animation */
+
+.autoBlur {
+  animation: autoBlurAnimation linear both;
+  animation-timeline: view(); /* essa propriedade requer suporte de navegador experimental (como Chrome com flag ativada) */
+}
+
+@keyframes autoBlurAnimation {
+  0% {
+    filter: blur(0); /* sem desfoque */
+  }
+  40%, 60% {
+    filter: blur(0);
+    transform: translateY(0px); /* sem movimento vertical */
+    opacity: 1; /* completamente visível */
+  }
+  100% {
+    filter: blur(40px); /* aplica forte desfoque */
+    transform: translateY(-200px); /* move o elemento 200px para cima */
+    opacity: 0; /* desaparece */
+  }
+}
+
+/* TAKE FULL SCREEN ANIMATION */
+.autoTakeFull { /* Classe que aplica a animação */
+  animation: autoTakeFullAnimation both; /* Aplica a animação chamada autoTakeFullAnimation */
+  animation-timeline: view(70% 65%);  /* Define o momento da animação com base na rolagem da página (experimental!)  */
+}
+
+/* Define os quadros da animação autoTakeFullAnimation */
+@keyframes autoTakeFullAnimation {
+  to {
+    width: 100%;/* Expande a largura para 100% do elemento pai */
+    height: 100vh; /* Altura igual à altura da viewport */
+    border-radius: 0; /* Remove quaisquer bordas arredondadas */
+    margin-bottom: 100px; /* Adiciona espaço de 100px abaixo do elemento */
+  }
+}
+
+/* AUTO DISPLAY ANIMATION */
+.autoDisplay { /* Classe que ativa a animação de entrada */
+  animation: autoDisplayAnimation both; /* Aplica a animação nomeada abaixo (ida e volta) */
+  animation-timeline: view(70% 5%); /* Inicia a animação quando 70% do elemento está visível e encerra em 5% */
+}
+
+/* Define os quadros da animação autoDisplayAnimation */
+@keyframes autoDisplayAnimation {
+  from { 
+    opacity: 0; /* Começa invisível */
+    transform: translateY(200px) scale(0.3); /* Desloca o elemento para baixo e diminui sua escala para 30% */
+  }
+  to {
+    opacity: 1; /* Termina totalmente visível */
+    transform: translateY(0) scale(1); /* Retorna à posição original com escala de 100% */
+  }
+}
+
+/* MEDIA QUERY PARA TELAS PEQUENAS */
+@media screen and (max-width: 650px) { /* Aplica os estilos abaixo apenas para telas com largura igual ou menor que 650px */
+
+  header {
+    padding: 0 10px; /* Reduz o espaçamento lateral do header para economizar espaço em telas menores */
+  }
+
+  .head-left button {
+    display: none; /* Esconde o botão do lado esquerdo do cabeçalho para simplificar a interface em dispositivos pequenos */
+  }
+
+  .head-right a {
+    font-size: 12px; /* Diminui o tamanho da fonte dos links à direita do header */
+    padding: 0 5px; /* Reduz o espaçamento interno dos links para evitar quebra de linha */
+  }
+
+  .hero-info {
+    left: 5%; /* Reposiciona o bloco de informações do herói mais próximo da borda esquerda da tela */
+  }
+  .hero-section h1 {
+  font-size: 90px; /* Título bem destacado para causar impacto visual na área hero */
+  }
+
+  /* BOTÃO NEXT — POSICIONAMENTO PERSONALIZADO */
+  .next-btn {
+    left: 25%;  /* Centraliza o botão horizontalmente com margem proporcional à esquerda */
+    top: 40%;   /* Posiciona o botão verticalmente abaixo do topo, criando uma hierarquia visual abaixo do título */
+  }
+
+  /* SEÇÃO ABOUT — REMOÇÃO DE MARGEM GERAL */
+  .about-section {
+    margin: 0; /* Elimina espaçamento externo para alinhar a seção com outras ou ocupar a largura total */
+  }
+
+  /* TÍTULO DENTRO DA SEÇÃO ABOUT */
+  .about-section h1 {
+    font-size: 50px; /* Tamanho moderado para o título, mantendo destaque sem exageros */
+  }
+
+  /* CAIXA DE IMAGEM — DEFINIÇÃO DE TAMANHO FIXO */
+  .image-box {
+    width: 300px;  /* Define largura padrão da imagem para consistência visual */
+    height: 500px; /* Altura fixa que garante proporção vertical desejada para o layout */
+
+  }
+
+    /* IMAGEM COM EFEITO DE DESFOQUE — POSICIONAMENTO ABSOLUTO */
+  .stones-img {
+    margin-top: 80%;   /* Empurra a imagem para baixo, usando 80% da altura do container como referência */
+    width: 400px;      /* Define uma largura média para destacar visualmente sem ocupar a tela inteira */
+  }
+      /* SEÇÃO ABOUT — ESTILIZAÇÃO DE SUBTÍTULOS */
+  .about-section h4, .about-section h5 {
+    max-width: 350px;      /* Limita a largura dos subtítulos para evitar que o texto fique muito espalhado em telas grandes */
+    text-align: center;    /* Centraliza o texto horizontalmente para manter simetria visual dentro da seção */
+  }
+
+    /* IMAGEM NA SEÇÃO DE CONTATO — POSICIONAMENTO DETALHADO */
+  .contact-section .img1 {
+    width: 150px;   /* Tamanho reduzido, possivelmente para ícones ou miniaturas */
+    height: 200px;  /* Altura compatível para destaque discreto */
+    right: 0;       /* Alinha totalmente à direita do container pai */
+    top: 20px;      /* Posiciona levemente abaixo do topo, criando espaço e respiro visual */
+  }
+
+  /* SEÇÃO DE CONTATO — IMAGEM SUPERIOR ESQUERDA */
+  .contact-section .img2 {
+    top: 30px;       /* Posiciona a imagem levemente abaixo do topo do container */
+    left: -40px;     /* Desloca a imagem para fora do limite esquerdo, criando efeito de sobreposição */
+    width: 180px;    /* Define largura padrão da imagem */
+    height: 180px;   /* Altura proporcional para manter formato quadrado */
+  }
+
+  /* SEÇÃO DE CONTATO — IMAGEM INFERIOR ESQUERDA */
+  .contact-section .img3 {
+    left: -40px;     /* Também deslocada para fora da borda esquerda, mantendo consistência com a outra imagem */
+    bottom: 0;       /* Alinha à base do container pai */
+    width: 150px;    /* Ligeiramente menor em largura para variação visual */
+    height: 180px;   /* Altura igual à .img2 para harmonia vertical */
+  }
+
+  /* TÍTULO DA SEÇÃO DE CONTATO */
+  .contact-section h1 {
+    font-size: 60px;     /* Tamanho de fonte chamativo para o título, ideal para seções finais */
+    max-width: 300px;    /* Limita a largura do título para controle visual e quebra de linha mais natural */
+  }
+
+    /* SEÇÃO DE RODAPÉ — AJUSTES DE PARÁGRAFO E LISTA */
+  .footer p {
+    display: none; /* Oculta todos os parágrafos dentro do rodapé, útil para limpar informações secundárias ou que só aparecem em telas maiores */
+  }
+
+  .footer ul {
+    margin-left: 70px; /* Adiciona espaçamento à esquerda das listas no rodapé, criando alinhamento visual com o restante do layout */
+  }
+
+}
+

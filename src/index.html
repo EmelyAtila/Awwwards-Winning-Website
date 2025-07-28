@@ -1,0 +1,163 @@
+<!DOCTYPE html> <!-- Declara o tipo do documento como HTML5 -->
+<html lang="en"> <!-- Define o idioma como inglês -->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gaming Website</title>
+  
+  <!-- Importa o CSS local -->
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- Otimização de conexão para fontes do Google -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+  <!-- Importa a fonte Montserrat com peso 900 -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet">
+  
+  <!-- Importa ícones da biblioteca Boxicons -->
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container"> <!-- Container geral do site -->
+
+        <!-- ===== HEADER ===== -->
+        <header>
+            <div class="head-left"> <!-- Lado esquerdo do cabeçalho -->
+                <img src="img/logo.png" alt = "logo"> <!-- Logo do site -->
+                <button>Products</button> <!-- Botão de produtos -->
+            </div>
+
+            <div class="head-right"> <!-- Lado direito do cabeçalho com links de navegação -->
+                <p><a href="#">NEXUS</a></p>
+                <p><a href="#">VAULT</a></p>
+                <p><a href="#">ABOUT</a></p>
+                <p><a href="#">SERVICES</a></p>
+                <p><a href="#">CONTACT</a></p>
+            </div>
+        </header>
+    
+        <!-- ===== HERO SECTION ===== -->
+        <section class="hero-section autoBlur">
+            <div class="hero-vid"> <!-- Container do vídeo principal -->
+
+                <!-- Elemento de vídeo de fundo do herói -->
+                <video autoplay muted plays-inline class="hero-video">
+                    <source src="videos/hero-1.mp4" type="video/mp4"> <!-- Fonte do vídeo -->
+                </video>  
+
+                <!-- Informações sobrepostas ao vídeo -->
+                <div class="hero-info">
+                    <h1>REDEFINE</h1> <!-- Título principal -->
+                    <p>Enter the metagame layer Unleash the play Economy</p> <!-- Subtítulo -->
+                    <button>Watch Trailer</button> <!-- Botão de ação (obs: "Whatch" está com typo, o correto é "Watch") -->
+                </div>
+
+                <h1 class="gaming-text">Gaming</h1> <!-- Texto decorativo adicional sobre o vídeo -->
+
+                <!-- Botão de navegação para o próximo conteúdo -->
+                <div class="next-btn">
+                    NEXT
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== ABOUT SECTION ===== -->
+        <section id= "about" class="about-section">
+            <p>Welcome to Zentry</p> <!-- Introdução -->
+            <div class="autoBlur">
+                <h1>DISCOVER THE WORLD'S LARGEST SHARED ADVENTURE</h1> <!-- Título principal da seção -->
+
+            </div>
+            <img class="stones-img" src="img/stones.png" alt="stones-image">
+            <div class="image-box autoTakeFull"> <!-- Caixa com imagem destacada -->
+                <img src="img/about.webp" alt="about-img"> <!-- Imagem sobre o universo do jogo -->
+            </div>
+
+            <h4>Game of Games begins-your life, now an epic MMORPG</h4> <!-- Subtítulo de contexto -->
+            <h5>Zentry unites every player from countless games and platforms, both digital and physical, into a unified Play Economy </h5> <!-- Explicação do conceito da plataforma -->
+        </section>
+
+        <!-- ===== INFO SECTION (cards) ===== -->
+        <section class="info-section">
+            <h3>Into the Metagame Layer</h3> <!-- Título da seção -->
+            <p>A cross-platform metagame app, turning your activities across Web2 and Web3 games into a rewarding adventure </p> <!-- Descrição geral -->
+
+            <div class="info-cards"> <!-- Container com todos os cards -->
+
+                <!-- ==== CARD 1 ==== -->
+                <div class="card autoDisplay">
+                    <h1>RADIANT</h1>
+                    <p>An anime and gaming-inspired NFT collection - the IP primed for expansion.</p>
+                    <video src="videos/feature-1.mp4" autoplay loop muted plays-inline></video>
+                    <button>COMING SOON</button>
+                </div>
+
+                <!-- ==== CARD 2 ==== -->
+                <div class="card autoDisplay">
+                    <h1>ZIGMA</h1>
+                    <!-- <p>A cross-platform metagame app, turning your activities across Web2 and Web3 games into a rewarding adventure.</p> -->
+                    <video src="videos/feature-2.mp4" autoplay loop muted plays-inline></video>
+                    <button>COMING SOON</button>
+                </div>
+
+                <!-- ==== CARD 3 ==== -->
+                <div class="card autoDisplay">
+                    <h1>NEXUS</h1>
+                    <p>A gaming social hub, adding a new dimension of play to social interaction for Web3 communities</p>
+                    <video src="videos/feature-3.mp4" autoplay loop muted plays-inline></video>
+                    <button>COMING SOON</button>
+                </div>
+
+                <!-- ==== CARD 4 ==== -->
+                <div class="card autoDisplay">
+                    <h1>AZULT</h1>
+                    <p>A cross-wordl AI Agent - elevating your gameplay to be more fun and productive.</p> <!-- Obs: "croos-wordl" está com erro de digitação. Correto: "cross-world" -->
+                    <video src="videos/feature-4.mp4" autoplay loop muted plays-inline></video>
+                    <button>COMING SOON</button>
+                </div>
+
+                <!-- ==== CARD 5 (somente vídeo) ==== -->
+                <div class="card autoDisplay">
+                    <video src="videos/feature-5.mp4" autoplay loop muted plays-inline></video>
+                </div>
+
+                <!-- ==== CARD 6 (placeholder) ==== -->
+                <div class="card autoDisplay">
+                    <h1>MORE COMING SOON</h1> <!-- Texto de expectativa -->
+                </div>  
+            </div>
+        </section>
+
+        <!-- ===== CONTACT SECTION ===== -->
+        <section class="contact-section">
+            <p>Join Zentry</p> <!-- Introdução -->
+
+            <div class="autoBlur">
+                <h1>LET'S BUILD THE NEW ERA OF GAMING TOGETHER</h1> <!-- Título principal -->
+            </div>
+
+            <button>CONTACT US</button> <!-- Botão de ação -->
+
+            <!-- Imagens decorativas com posições personalizadas via CSS -->
+            <img class = "img1" src="img/swordman.webp" alt="contact-img">
+            <img class = "img2" src="img/contact-1.webp" alt="contact-img">
+            <img class = "img3" src="img/contact-2.webp" alt="contact-img">
+        </section>
+
+        <section class="footer">
+            <p>@Nova 2025. All rights reserved</p>
+            <ul>
+                <li><a href="#"><i class='bx bxl-youtube'></i></a></li>
+                <li><a href="#"><i class='bx bxl-twitter'></i></a></li>
+                <li><a href="#"><i class='bx bxl-github' ></i></a></li>
+                <li><a href="#"><i class='bx bxl-linkedin' ></i></a></li>
+            </ul>
+            <p>Privacy Policy</p>
+        </section>
+    </div>
+
+    <!-- Importa script JS externo -->
+    <script src="app.js"></script>
+</body>
+</html>
